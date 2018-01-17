@@ -7,9 +7,9 @@ function countLetters(sentence) {
     var char = sentence[i]
     if (char !== " ") {
       if (letterCounts[char] === undefined) {
-        letterCounts[char] = 0;
+        letterCounts[char] = [];
       }
-      letterCounts[char] += 1;
+      letterCounts[char].push(i);
     }
   }
   return letterCounts;
